@@ -1,0 +1,54 @@
+.DS_Store
+.Spotlight-V100/
+.Trashes/
+Thumbs.db
+Desktop.ini
+
+# Editor / IDE
+.vscode/
+.idea/
+.fleet/
+*.code-workspace
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+*.out
+*.err
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Dependencies
+node_modules/
+
+# Build outputs
+dist/
+build/
+out/
+coverage/
+tmp/
+temp/
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# Archives and backups
+*.zip
+*.tar
+*.gz
+*.bak
+*.tmp
+
