@@ -24,10 +24,13 @@ software/
     faults.py      Fehlerinjektion (spike, drift, frozen, dropout, correlated) + Ground-Truth-Labels
     detectors.py   MA, EWMA, z-Score, Frozen-, Dropout-, Drift- und PCA-Detektor
     metrics.py     Precision/Recall/F1/FPR gegen Ground-Truth-Labels
+    dashboard_logic.py  Ampel-Status + Alarmtabelle (Streamlit-unabhängig, getestet)
+  dashboard/
+    app.py         Streamlit-UI: Zeitreihen, Status-Ampeln, Alarmtabelle, CSV-Export
   scripts/
     generate_demo_dataset.py    erzeugt data/demo_sensor_data.csv + demo_labels.csv
     run_demo_evaluation.py      führt alle Detektoren aus und druckt Vergleichstabelle
-  tests/           pytest-Tests für Generator, Fehlerinjektor, Detektoren
+  tests/           pytest-Tests für Generator, Fehlerinjektor, Detektoren, Dashboard-Logik
   data/            generierte CSVs (nicht versioniert)
 ```
 
@@ -37,10 +40,11 @@ software/
 python scripts/generate_demo_dataset.py
 python scripts/run_demo_evaluation.py
 pytest
+streamlit run dashboard/app.py
 ```
 
 ## Offene Punkte (siehe Softwareplan_Buder.md)
 
-- Dashboard (Streamlit) mit Status-Ampeln
 - Parameterstudie Schwellenwert vs. Erkennungsrate
 - YAML-Konfiguration statt hartcodierter Szenarien
+- Alarm-Priorisierung / Entprellung vor der Ampel-Logik
