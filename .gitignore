@@ -52,3 +52,10 @@ venv/
 *.bak
 *.tmp
 
+# Python packaging artifacts
+*.egg-info/
+
+# generierte Demo-Daten (reproduzierbar via scripts/generate_demo_dataset.py)
+software/data/*.csv
+
+Softwareplan_Buder.md
