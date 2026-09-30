@@ -72,3 +72,4 @@ def test_alarm_table_empty_when_no_alarms():
     # sauberer Datensatz: frozen/dropout sollten still bleiben
     assert not ((table["sensor"] == "press") & (table["detector"] == "dropout")).any()
     assert not ((table["sensor"] == "press") & (table["detector"] == "frozen")).any()
+

@@ -3,7 +3,8 @@ und druckt eine Precision/Recall/F1-Vergleichstabelle - Basis für die
 Ergebnisse in Kapitel 5 der DA.
 
 Aufruf:
-    python scripts/run_demo_evaluation.py
+    cd software
+    python -m scripts.run_demo_evaluation
 """
 from pathlib import Path
 

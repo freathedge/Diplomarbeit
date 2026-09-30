@@ -106,3 +106,4 @@ def alarm_table(all_sensor_alarms: dict[str, dict[str, pd.Series]]) -> pd.DataFr
         return pd.DataFrame(columns=["sensor", "detector", "start", "end"])
     table = pd.DataFrame(rows).sort_values("start").reset_index(drop=True)
     return table
+

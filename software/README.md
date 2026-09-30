@@ -43,6 +43,10 @@ pytest
 streamlit run dashboard/app.py
 ```
 
+Das Dashboard läuft unter http://127.0.0.1:8501 (nicht `localhost`, siehe
+`.streamlit/config.toml`). Nur aus `software/` starten, sonst wird die Config
+nicht geladen.
+
 ## Offene Punkte (siehe Softwareplan_Buder.md)
 
 - Parameterstudie Schwellenwert vs. Erkennungsrate

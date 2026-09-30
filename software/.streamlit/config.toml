@@ -1,0 +1,20 @@
+# Dashboard über 127.0.0.1 statt "localhost" ausliefern.
+# Browser schicken an "localhost" die Cookies aller anderen lokalen Projekte mit
+# (Supabase, Clerk, ...). Wird der Cookie-Header länger als 8192 Bytes, bleibt der
+# WebSocket-Handshake von Streamlit hängen: Die Seite zeigt dann nur den
+# Skeleton-Loader, und Ctrl+C beendet den Server nicht mehr.
+[server]
+address = "127.0.0.1"
+
+[browser]
+serverAddress = "127.0.0.1"
+
+# Leitwarten-Look: dunkle, ruhige Flächen, Farbe nur für Status/Alarm.
+[theme]
+base = "dark"
+primaryColor = "#3987e5"
+backgroundColor = "#0d0d0d"
+secondaryBackgroundColor = "#1a1a19"
+textColor = "#f2f1ec"
+borderColor = "#2c2c2a"
+baseRadius = "0.6rem"
